@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Mail;
 use App\Http\Requests\Auth\ForgotPasswordRequest;
 
-class ResetCodePasswordController extends Controller
+class ForgotPasswordController extends Controller
 {
     /**
      * Send random code to email of user to reset password (Setp 1)
