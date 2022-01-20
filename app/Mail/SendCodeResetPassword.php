@@ -16,9 +16,11 @@ class SendCodeResetPassword extends Mailable
      *
      * @return void
      */
-    public function __construct()
+    public $code;
+
+    public function __construct($code)
     {
-        //
+        $this->code = $code;
     }
 
     /**
@@ -28,6 +30,6 @@ class SendCodeResetPassword extends Mailable
      */
     public function build()
     {
-        return $this->view('view.name');
+        return $this->markdown('emails.send-code-reset-password');
     }
 }
